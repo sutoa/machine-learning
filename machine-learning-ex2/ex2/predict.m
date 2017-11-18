@@ -16,7 +16,14 @@ p = zeros(m, 1);
 %
 
 
-
+possibility = X * theta;
+for i = 1:m
+    if possibility(i) >=0.5
+        p(i) = 1;
+    else
+        p(i) = 0;
+    endif
+endfor
 
 
 
